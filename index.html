@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Dwalia Drug Store - Premium Pharmaceutical Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="https://via.placeholder.com/40x40/4a6fa5/ffffff?text=AD" alt="Al Dwalia Logo">
+                Al Dwalia
+            </a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="active" data-i18n="home">Home</a></li>
+                <li><a href="#products" data-i18n="products">Products</a></li>
+                <li><a href="#about" data-i18n="about">About</a></li>
+                <li><a href="#contact" data-i18n="contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="language-toggle" id="languageToggle">
+                    <img src="https://flagcdn.com/w20/gb.png" class="language-flag" id="languageFlag" alt="English">
+                </button>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="heroTitle">Al Dwalia Drug Store</h1>
+            <p data-i18n="heroText">Premium pharmaceutical products and skincare solutions for all your health needs.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn" data-i18n="shopNow">
+                    <i class="fas fa-shopping-bag"></i> Shop Now
+                </a>
+                <a href="#about" class="btn btn-outline" data-i18n="learnMore">
+                    <i class="fas fa-book-open"></i> Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="section-title" id="products">
+            <h2 data-i18n="ourProducts">Our Products</h2>
+        </div>
+
+        <!-- Enhanced Filters Section -->
+        <div class="filters">
+            <div class="filter-group">
+                <label for="skinTypeFilter" data-i18n="skinType">Skin Type</label>
+                <select id="skinTypeFilter" class="filter-select">
+                    <option value="all" data-i18n="allSkinTypes">All Skin Types</option>
+                    <option value="Oily" data-i18n="oily">Oily</option>
+                    <option value="Dry" data-i18n="dry">Dry</option>
+                    <option value="Combination" data-i18n="combination">Combination</option>
+                    <option value="Sensitive" data-i18n="sensitive">Sensitive</option>
+                    <option value="Acne-Prone" data-i18n="acneProne">Acne-Prone</option>
+                    <option value="Normal" data-i18n="normal">Normal</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="priceFilter" data-i18n="priceRange">Price Range</label>
+                <select id="priceFilter" class="filter-select">
+                    <option value="all" data-i18n="allPrices">All Prices</option>
+                    <option value="0-25" data-i18n="under25">Under $25</option>
+                    <option value="25-30" data-i18n="25to30">$25 - $30</option>
+                    <option value="30-35" data-i18n="30to35">$30 - $35</option>
+                    <option value="35+" data-i18n="over35">Over $35</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="sortBy" data-i18n="sortBy">Sort By</label>
+                <select id="sortBy" class="filter-select">
+                    <option value="default" data-i18n="default">Default</option>
+                    <option value="popular" data-i18n="mostPopular">Most Popular</option>
+                    <option value="rating" data-i18n="highestRating">Highest Rating</option>
+                    <option value="newest" data-i18n="newest">Newest</option>
+                    <option value="price-low" data-i18n="priceLowHigh">Price: Low to High</option>
+                    <option value="price-high" data-i18n="priceHighLow">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="categories">
+            <button class="category-btn active" data-category="all">
+                <i class="fas fa-star"></i> <span data-i18n="allProducts">All Products</span>
+            </button>
+            <button class="category-btn" data-category="cleansers">
+                <i class="fas fa-pump-soap"></i> <span data-i18n="cleansers">Cleansers</span>
+            </button>
+            <button class="category-btn" data-category="moisturizers">
+                <i class="fas fa-spa"></i> <span data-i18n="moisturizers">Moisturizers</span>
+            </button>
+            <button class="category-btn" data-category="serums">
+                <i class="fas fa-flask"></i> <span data-i18n="serums">Serums</span>
+            </button>
+            <button class="category-btn" data-category="sunscreen">
+                <i class="fas fa-sun"></i> <span data-i18n="sunscreen">Sunscreen</span>
+            </button>
+            <button class="category-btn" data-category="acne">
+                <i class="fas fa-leaf"></i> <span data-i18n="acneSolutions">Acne Solutions</span>
+            </button>
+        </div>
+
+        <div class="products" id="productsContainer">
+            <!-- Products will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="container" style="margin-top: 5rem; margin-bottom: 5rem;">
+        <div class="section-title">
+            <h2 data-i18n="aboutUs">About Us</h2>
+        </div>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p data-i18n="aboutText1">Al Dwalia Drug Store has been serving the community with premium pharmaceutical products and skincare solutions for over 20 years.</p>
+            <p data-i18n="aboutText2">Our team of experienced pharmacists and skincare specialists are dedicated to providing personalized care and expert advice.</p>
+            <p data-i18n="aboutText3">We carry only the highest quality products from trusted brands to ensure your health and wellness.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container" style="margin-top: 5rem; margin-bottom: 5rem;">
+        <div class="section-title">
+            <h2 data-i18n="contactUs">Contact Us</h2>
+        </div>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i> <span data-i18n="address">123 Health St, Medical District, City</span></p>
+            <p><i class="fas fa-phone" style="margin-right: 0.5rem;"></i> <span data-i18n="phone">+123 456 7890</span></p>
+            <p><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i> <span>info@aldwalia.com</span></p>
+            <p><i class="fas fa-clock" style="margin-right: 0.5rem;"></i> <span data-i18n="hours">Mon-Sat: 8:00 AM - 10:00 PM | Sun: 10:00 AM - 8:00 PM</span></p>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> <span data-i18n="yourCart">Your Cart</span></h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be inserted here -->
+            <div class="empty-cart-message">
+                <i class="fas fa-shopping-cart"></i>
+                <h4 data-i18n="emptyCartTitle">Your cart is empty</h4>
+                <p data-i18n="emptyCartText">Looks like you haven't added anything to your cart yet</p>
+                <button class="btn" id="continueShoppingBtn">
+                    <i class="fas fa-arrow-left"></i> <span data-i18n="continueShopping">Continue Shopping</span>
+                </button>
+            </div>
+        </div>
+        <div class="cart-total">
+            <h4 data-i18n="total">Total: <span id="cartTotal">$0.00</span></h4>
+            <button class="btn checkout-btn" id="checkoutBtn">
+                <i class="fas fa-credit-card"></i> <span data-i18n="checkout">Checkout</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-header">
+            <h3 data-i18n="completeOrder">Complete Your Order</h3>
+            <p data-i18n="fillDetails">Please fill in your details to complete your purchase</p>
+        </div>
+        
+        <div id="errorContainer" style="display: none;">
+            <!-- Error messages will be inserted here -->
+        </div>
+        
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="fullName" data-i18n="fullName">Full Name</label>
+                <input type="text" id="fullName" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="phone" data-i18n="phoneNumber">Phone Number</label>
+                <input type="tel" id="phone" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="city" data-i18n="city">City</label>
+                <select id="city" class="form-control" required>
+                    <option value="" data-i18n="selectCity">Select City</option>
+                    <option value="Ramallah" data-i18n="ramallah">Ramallah</option>
+                    <option value="Nablus" data-i18n="nablus">Nablus</option>
+                    <option value="Jerusalem" data-i18n="jerusalem">Jerusalem</option>
+                    <option value="Bethlehem" data-i18n="bethlehem">Bethlehem</option>
+                    <option value="Hebron" data-i18n="hebron">Hebron</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="address" data-i18n="address">Address</label>
+                <select id="address" class="form-control" required>
+                    <option value="" data-i18n="selectAddress">Select Address</option>
+                    <option value="123 Main St" data-i18n="address1">123 Main St</option>
+                    <option value="456 Oak Ave" data-i18n="address2">456 Oak Ave</option>
+                    <option value="789 Pine Rd" data-i18n="address3">789 Pine Rd</option>
+                    <option value="321 Elm Blvd" data-i18n="address4">321 Elm Blvd</option>
+                </select>
+            </div>
+            <button type="submit" class="btn submit-order">
+                <i class="fas fa-paper-plane"></i> <span data-i18n="submitOrder">Submit Order</span>
+            </button>
+        </form>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="confirmation-modal" id="confirmationModal">
+        <h3 data-i18n="confirmOrder">Confirm Your Order</h3>
+        <p data-i18n="confirmOrderText">Are you sure you want to proceed with this order?</p>
+        <div class="confirmation-buttons">
+            <button class="btn confirm-btn" id="confirmOrderBtn">
+                <i class="fas fa-check"></i> <span data-i18n="yes">Yes</span>
+            </button>
+            <button class="btn cancel-btn" id="cancelOrderBtn">
+                <i class="fas fa-times"></i> <span data-i18n="no">No</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="checkout-modal" id="successModal">
+        <div class="success-message">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 data-i18n="orderSuccess">Order Submitted Successfully!</h3>
+            <p data-i18n="orderSuccessText">Our customer support will call you in the next 24 hours to confirm your order.</p>
+            <button class="btn" id="closeSuccessModal">
+                <i class="fas fa-shopping-bag"></i> <span data-i18n="backToShopping">Back to Shopping</span>
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="footer-logo">Al Dwalia</a>
+            <ul class="footer-links">
+                <li><a href="#" data-i18n="home">Home</a></li>
+                <li><a href="#products" data-i18n="products">Products</a></li>
+                <li><a href="#about" data-i18n="about">About</a></li>
+                <li><a href="#contact" data-i18n="contact">Contact</a></li>
+                <li><a href="#" data-i18n="privacyPolicy">Privacy Policy</a></li>
+                <li><a href="#" data-i18n="terms">Terms of Service</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright" data-i18n="copyright">© 2023 Al Dwalia Drug Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>
