@@ -1,0 +1,29 @@
+:root {
+    --primary: #2c6e49; /* Deep Emerald */
+    --primary-dark: #204a33; /* Forest Green */
+    --primary-light: #4b8f5c; /* Soft Mint Green */
+    --secondary: #f0f0f0; /* Pale Ivory */
+    --accent: #ffd700; /* Gold */
+    --accent-dark: #d49f00; /* Rich Gold */
+    --text: #34495e; /* Charcoal Blue */
+    --light-text: #7f8c8d; /* Light Grayish Blue */
+    --white: #fff;
+    --black: #111;
+}
+
+.dark-mode {
+    --primary: #ffd700; /* Gold */
+    --primary-dark: #d49f00; /* Rich Gold */
+    --primary-light: #4b8f5c; /* Soft Mint Green */
+    --secondary: #333; /* Charcoal */
+    --accent: #ffd700; /* Gold */
+    --accent-dark: #c87c00; /* Golden Brown */
+    --text: #f1f1f1; /* Soft Light Gray */
+    --light-text: #b0b0b0; /* Grayish */
+    --white: #222;
+    --black: #fff;
+    --border: #2d3748;
+    --bg-color: #12161d;
+    --text-color: #f0f0f0;
+    --card-bg: #1a1e24;
+}

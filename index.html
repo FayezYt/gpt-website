@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar">
             <a href="#" class="logo">
-                <img src="https://via.placeholder.com/40x40/4a6fa5/ffffff?text=AD" alt="Al Dwalia Logo">
+                <img src="noreva.ico" alt="Al Dwalia Logo">
                 Al Dwalia
             </a>
             
@@ -40,20 +40,74 @@
             </div>
         </nav>
     </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1 data-i18n="heroTitle">Al Dwalia Drug Store</h1>
-            <p data-i18n="heroText">Premium pharmaceutical products and skincare solutions for all your health needs.</p>
-            <div class="hero-buttons">
-                <a href="#products" class="btn" data-i18n="shopNow">
-                    <i class="fas fa-shopping-bag"></i> Shop Now
-                </a>
-                <a href="#about" class="btn btn-outline" data-i18n="learnMore">
-                    <i class="fas fa-book-open"></i> Learn More
-                </a>
+    
+    <!-- Premium Banner Carousel -->
+    <section class="banner-carousel">
+        <div class="banner-container">
+            <!-- Banner 1 -->
+            <div class="banner-slide active" style="background-image: url('https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                <div class="banner-content">
+                    <span class="banner-badge" data-i18n="bannerBadgeNew">New Collection</span>
+                    <h2 data-i18n="banner1Title">Science-Backed Skincare</h2>
+                    <p data-i18n="banner1Text">Clinically proven formulas for visible results</p>
+                    <div class="banner-buttons">
+                        <a href="#products" class="btn banner-btn" data-i18n="exploreProducts">
+                            <i class="fas fa-flask"></i> Explore Products
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Banner 2 -->
+            <div class="banner-slide" style="background-image: url('https://images.unsplash.com/photo-1556228578-8c89e6adf883?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                <div class="banner-content right-align">
+                    <h2 data-i18n="banner2Title">Dermatologist Approved</h2>
+                    <p data-i18n="banner2Text">Trusted by skincare professionals worldwide</p>
+                    <div class="banner-buttons">
+                        <a href="#about" class="btn banner-btn btn-outline" data-i18n="ourApproach">
+                            <i class="fas fa-award"></i> Our Approach
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Banner 3 -->
+            <div class="banner-slide" style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                <div class="banner-content dark-overlay">
+                    <span class="banner-badge" data-i18n="bannerBadgeSale">Limited Offer</span>
+                    <h2 data-i18n="banner3Title">Exclusive Deals</h2>
+                    <p data-i18n="banner3Text">Premium quality at special prices</p>
+                    <div class="banner-buttons">
+                        <a href="#products" class="btn banner-btn accent-btn" data-i18n="shopDeals">
+                            <i class="fas fa-tag"></i> Shop Deals
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Banner 4 -->
+            <div class="banner-slide" style="background-image: url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                <div class="banner-content center-align">
+                    <h2 data-i18n="banner4Title">Personalized Solutions</h2>
+                    <p data-i18n="banner4Text">Find the perfect products for your skin type</p>
+                    <div class="banner-buttons">
+                        <a href="#products" class="btn banner-btn" data-i18n="takeQuiz">
+                            <i class="fas fa-spa"></i> Take Skin Quiz
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
+        
+        <!-- Navigation -->
+        <button class="banner-nav prev" aria-label="Previous banner">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="banner-nav next" aria-label="Next banner">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <div class="banner-dots"></div>
     </section>
 
     <div class="container">
@@ -67,12 +121,12 @@
                 <label for="skinTypeFilter" data-i18n="skinType">Skin Type</label>
                 <select id="skinTypeFilter" class="filter-select">
                     <option value="all" data-i18n="allSkinTypes">All Skin Types</option>
-                    <option value="Oily" data-i18n="oily">Oily</option>
-                    <option value="Dry" data-i18n="dry">Dry</option>
-                    <option value="Combination" data-i18n="combination">Combination</option>
-                    <option value="Sensitive" data-i18n="sensitive">Sensitive</option>
-                    <option value="Acne-Prone" data-i18n="acneProne">Acne-Prone</option>
-                    <option value="Normal" data-i18n="normal">Normal</option>
+                    <option value="دهنية" data-i18n="oily">Oily</option>
+                    <option value="جافة" data-i18n="dry">Dry</option>
+                    <option value="مختلطة" data-i18n="combination">Combination</option>
+                    <option value="حساسة" data-i18n="sensitive">Sensitive</option>
+                    <option value="معرضة لحب الشباب" data-i18n="acneProne">Acne-Prone</option>
+                    <option value="عادية" data-i18n="normal">Normal</option>
                 </select>
             </div>
             
@@ -162,16 +216,17 @@
         <div class="cart-items" id="cartItems">
             <!-- Cart items will be inserted here -->
             <div class="empty-cart-message">
-                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-shopping-cart my-cart"></i>
                 <h4 data-i18n="emptyCartTitle">Your cart is empty</h4>
                 <p data-i18n="emptyCartText">Looks like you haven't added anything to your cart yet</p>
                 <button class="btn" id="continueShoppingBtn">
-                    <i class="fas fa-arrow-left"></i> <span data-i18n="continueShopping">Continue Shopping</span>
+                    <i class="fas fa-arrow-left my-arrow"></i> <span id="my-span" data-i18n="continueShopping">Continue Shopping</span>
                 </button>
             </div>
         </div>
         <div class="cart-total">
-            <h4 data-i18n="total">Total: <span id="cartTotal">$0.00</span></h4>
+            <h4><span data-i18n="total">Total</span> <span id="cartTotal">$0.00</span></h4>
+            
             <button class="btn checkout-btn" id="checkoutBtn">
                 <i class="fas fa-credit-card"></i> <span data-i18n="checkout">Checkout</span>
             </button>
@@ -234,10 +289,10 @@
         <p data-i18n="confirmOrderText">Are you sure you want to proceed with this order?</p>
         <div class="confirmation-buttons">
             <button class="btn confirm-btn" id="confirmOrderBtn">
-                <i class="fas fa-check"></i> <span data-i18n="yes">Yes</span>
+                <i class="fas fa-check"></i> <span data-i18n="yes" class="confirm-btns-class">Yes</span>
             </button>
             <button class="btn cancel-btn" id="cancelOrderBtn">
-                <i class="fas fa-times"></i> <span data-i18n="no">No</span>
+                <i class="fas fa-times"></i> <span data-i18n="no" class="confirm-btns-class">No</span>
             </button>
         </div>
     </div>
@@ -256,29 +311,26 @@
         </div>
     </div>
 
+    
+
     <footer>
         <div class="footer-content">
-            <a href="#" class="footer-logo">Al Dwalia</a>
+            <a href="#" style="text-decoration: none;" class="footer-logo">Al Dwalia</a>
             <ul class="footer-links">
                 <li><a href="#" data-i18n="home">Home</a></li>
                 <li><a href="#products" data-i18n="products">Products</a></li>
                 <li><a href="#about" data-i18n="about">About</a></li>
                 <li><a href="#contact" data-i18n="contact">Contact</a></li>
-                <li><a href="#" data-i18n="privacyPolicy">Privacy Policy</a></li>
-                <li><a href="#" data-i18n="terms">Terms of Service</a></li>
             </ul>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>  
             </div>
             <p class="copyright" data-i18n="copyright">© 2023 Al Dwalia Drug Store. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js">
-        
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

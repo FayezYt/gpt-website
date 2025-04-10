@@ -1,0 +1,29 @@
+:root {
+    --primary: #5f6368; /* Slate Gray */
+    --primary-dark: #424242; /* Dark Charcoal */
+    --primary-light: #9e9e9e; /* Light Gray */
+    --secondary: #f1f1f1; /* Soft Ivory */
+    --accent: #ffb300; /* Gold Yellow */
+    --accent-dark: #d57c00; /* Burnt Gold */
+    --text: #212121; /* Almost Black */
+    --light-text: #757575; /* Medium Gray */
+    --white: #fff;
+    --black: #111;
+}
+
+.dark-mode {
+    --primary: #ffb300; /* Gold Yellow */
+    --primary-dark: #d57c00; /* Burnt Gold */
+    --primary-light: #9e9e9e; /* Light Gray */
+    --secondary: #333; /* Dark Gray */
+    --accent: #ffb300; /* Gold Yellow */
+    --accent-dark: #e67e22; /* Dark Amber */
+    --text: #f0f0f0; /* Soft White */
+    --light-text: #b0b0b0; /* Gray */
+    --white: #222;
+    --black: #fff;
+    --border: #2d3748;
+    --bg-color: #12161d;
+    --text-color: #f0f0f0;
+    --card-bg: #1a1e24;
+}

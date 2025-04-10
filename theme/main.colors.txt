@@ -1,0 +1,42 @@
+:root {
+    --primary: #4a6fa5; /* Al Dwalia blue */
+    --primary-dark: #3a5a8c;
+    --primary-light: #5b8fd8;
+    --secondary: #f0f4f8;
+    --accent: #ff7e7e;
+    --accent-dark: #ff6b6b;
+    --text: #333;
+    --light-text: #666;
+    --white: #fff;
+    --black: #222;
+    --border: #d1d9e6;
+    --success: #4caf50;
+    --error: #f44336;
+    --warning: #ff9800;
+    --overlay: rgba(0, 0, 0, 0.5);
+    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --transition-fast: all 0.15s ease;
+    --bg-color: var(--white);
+    --text-color: var(--text);
+    --card-bg: var(--white);
+}
+
+/* Dark Theme Variables */
+.dark-mode {
+    --primary: #5b8fd8;
+    --primary-dark: #4a6fa5;
+    --primary-light: #6da3ff;
+    --secondary: #1a1e24;
+    --accent: #ff7e7e;
+    --text: #f0f0f0;
+    --light-text: #b0b0b0;
+    --white: #222;
+    --black: #f0f0f0;
+    --border: #2d3748;
+    --bg-color: #12161d;
+    --text-color: #f0f0f0;
+    --card-bg: #1a1e24;
+}

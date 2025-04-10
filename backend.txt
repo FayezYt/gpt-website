@@ -1,0 +1,21 @@
+Admin panel: 
+
+PRODUCTS SECTION
+
+1- add product
+2- delete product
+3- edit product
+4- view product
+
+Order SECTION
+
+Data SECTION
+
+1- add cites
+2- add streets
+3- edit data overall
+
+database:
+1- product things 
+2- how many order
+3- rating
